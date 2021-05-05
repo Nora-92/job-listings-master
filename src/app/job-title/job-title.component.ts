@@ -1,5 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+interface Dati {
+  postedAt: string;
+  contract: string;
+  location: string;
+}
+
 @Component({
   selector: 'app-job-title',
   templateUrl: './job-title.component.html',
@@ -9,11 +15,7 @@ export class JobTitleComponent implements OnInit {
 
   @Input() position?: string;
 
-  @Input() dati = {
-    postedAt: '',
-    contract: '',
-    location: ''
-  }
+  @Input() dati? : Dati
 
   constructor() { }
 

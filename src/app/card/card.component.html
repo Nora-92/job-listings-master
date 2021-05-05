@@ -1,4 +1,5 @@
 <div *ngIf="job" class="card">
     <app-avatar imageUrl = "../../assets/images/{{job.logo}}"></app-avatar>
-    <app-job-title [position] = "job.position" [dati] = "job.postedAt" ></app-job-title>
+    <app-job-title [position] = "job.position" 
+    [dati] = "{postedAt: job.postedAt, contract: job.contract, location: job.location}"></app-job-title>
 </div>

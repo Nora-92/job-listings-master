@@ -1,6 +1,8 @@
 <div *ngIf="position">
     <h2>{{position}}</h2>
+    <ng-container *ngIf="dati">
+        {{dati.postedAt}} - {{dati.contract}} - {{dati.location}}
+    </ng-container>
+    
 </div>
-<div *ngFor="let dato of dati">
-    <p>{{dato.postedAt}} - {{dato.contract}} - {{dato.location}}</p>
-</div>
+
