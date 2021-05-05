@@ -1,8 +1,8 @@
-<div *ngIf="position">
-    <h2>{{position}}</h2>
-    <ng-container *ngIf="dati">
+<div *ngIf="position" class="full-container">
+    <h3>{{position}}</h3>
+    <div *ngIf="dati" class="container">
         {{dati.postedAt}} - {{dati.contract}} - {{dati.location}}
-    </ng-container>
+    </div>
     
 </div>
 

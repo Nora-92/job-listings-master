@@ -12,6 +12,7 @@ import { CardComponent } from './card/card.component';
 import { CompanyDescriptionComponent } from './company-description/company-description.component';
 import { AvatarComponent } from './avatar/avatar.component';
 import { JobTitleComponent } from './job-title/job-title.component';
+import { PillComponent } from './pill/pill.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { JobTitleComponent } from './job-title/job-title.component';
     CardComponent,
     CompanyDescriptionComponent,
     AvatarComponent,
-    JobTitleComponent
+    JobTitleComponent,
+    PillComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,25 @@
+p{
+    display: flex;
+    flex-direction: row;
+    color: #5ba4a4;
+    margin-left: 10px;
+    margin-top: 10px;
+    align-content: center;
+    align-items: center;
+}
+
+.new{
+    border-radius: 5px;
+    background-color: hsl(180, 29%, 50%) !important;
+    color: hsl(180, 52%, 96%) !important;
+    padding: 3px;
+    margin-left: 5px;
+}
+
+.featured{
+    border-radius: 5px;
+    background-color: hsl(180, 14%, 20%) !important;
+    color: hsl(180, 52%, 96%) !important;
+    padding: 3px;
+    margin-left: 5px;
+}

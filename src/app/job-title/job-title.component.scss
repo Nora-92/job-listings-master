@@ -1,0 +1,20 @@
+.full-container{
+    display: flex;
+    justify-items: flex-end;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin-left: 10px;
+    align-items: flex-start;
+    height: 75px;
+}
+
+h3{
+    margin-top: 5px;
+    color: hsl(180, 14%, 20%);
+}
+
+.container{
+    margin-top: 5px;
+    color: hsl(180, 8%, 52%);
+}
