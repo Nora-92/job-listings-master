@@ -1,11 +1,12 @@
 <div *ngIf="job" class="card">
     <app-avatar imageUrl="../../assets/images/{{job.logo}}"></app-avatar>
     <div class="container">
-        <app-pill [pill]="{company: job.company, new: job.new, featured: job.featured}"></app-pill>        
+        <app-pill [pill]="{company: job.company, new: job.new, featured: job.featured}"></app-pill>
         <app-job-title [position]="job.position"
             [dati]="{postedAt: job.postedAt, contract: job.contract, location: job.location}"></app-job-title>
     </div>
-</div>
-<div>
-    <!-- pill -->
+
+    <div *ngFor="let language of job.languages">
+        <app-pill-languages *ngFor="let tool of job.tools" [languages] = "{role: job.role, level: job.level, languages: language, tools: tool}"></app-pill-languages>
+    </div>
 </div>

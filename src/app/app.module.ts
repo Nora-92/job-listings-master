@@ -13,6 +13,7 @@ import { CompanyDescriptionComponent } from './company-description/company-descr
 import { AvatarComponent } from './avatar/avatar.component';
 import { JobTitleComponent } from './job-title/job-title.component';
 import { PillComponent } from './pill/pill.component';
+import { PillLanguagesComponent } from './pill-languages/pill-languages.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PillComponent } from './pill/pill.component';
     CompanyDescriptionComponent,
     AvatarComponent,
     JobTitleComponent,
-    PillComponent
+    PillComponent,
+    PillLanguagesComponent
   ],
   imports: [
     BrowserModule,
