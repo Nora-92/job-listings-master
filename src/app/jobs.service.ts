@@ -13,16 +13,28 @@ export class JobsService {
     // this.http.get<Job[]>('/api/jobs?languages=(python|javascript|html)&tools=(react)').subscribe(console.log)
     // this.http.get<Job[]>('/api/jobs?tools=(ror|react)').subscribe(console.log)
 
-    const makeSearchString = (filters: string[]) => {
-      return `(${filters.join('|')})`
-    }
+    // const makeSearchString = (filters: string[]) => {
+    //   return `(${filters.join('|')})`
+    // }
 
-    console.log(makeSearchString(['react', 'ror']))
+    // console.log(makeSearchString(['react', 'ror']))
 
-    const requestOptions = new HttpParams({ fromObject: { tools: makeSearchString(['react', 'ror']), languages: '' } })
+    // const requestOptions = new HttpParams({ fromObject: { tools: makeSearchString(['react', 'ror']), languages: '' } })
 
-    console.log(requestOptions)
+    // console.log(requestOptions)
 
-    this.http.get<Job[]>('/api/jobs', { params: requestOptions }).subscribe(console.log)
+    
+
+    // this.http.get<Job[]>('/api/jobs', { params: requestOptions }).subscribe(console.log)
+    return this.http.get<Job[]>('/api/jobs')
+    //this.http.get<Job[]>('/api/jobs')
+
   }
+
+  getJobsById(id: number){
+    const optionId = new HttpParams({fromObject: {id: ''}})
+    this.http.get<Job[]>('/api/jobs', {params: optionId}).subscribe(console.log)
+  }
+
+
 }

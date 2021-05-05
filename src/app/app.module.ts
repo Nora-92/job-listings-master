@@ -8,12 +8,20 @@ import { AppComponent } from './app.component';
 import { InMemoryJobsService } from './in-memory-jobs';
 import { HomeComponent } from './home/home.component';
 import { JobsDetailComponent } from './jobs-detail/jobs-detail.component';
+import { CardComponent } from './card/card.component';
+import { CompanyDescriptionComponent } from './company-description/company-description.component';
+import { AvatarComponent } from './avatar/avatar.component';
+import { JobTitleComponent } from './job-title/job-title.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    JobsDetailComponent
+    JobsDetailComponent,
+    CardComponent,
+    CompanyDescriptionComponent,
+    AvatarComponent,
+    JobTitleComponent
   ],
   imports: [
     BrowserModule,

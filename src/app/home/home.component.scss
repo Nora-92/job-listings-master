@@ -1,0 +1,17 @@
+header {
+    background-color: hsl(180, 29%, 50%);
+    height: 80%;
+}
+
+.full-card{
+    border: 1px solid black;
+    height: 100vh;
+}
+
+.card{
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    flex-direction: column;    
+    margin-left: 250px;
+}
