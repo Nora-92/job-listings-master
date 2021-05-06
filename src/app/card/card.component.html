@@ -6,7 +6,10 @@
             [dati]="{postedAt: job.postedAt, contract: job.contract, location: job.location}"></app-job-title>
     </div>
 
-    <div *ngFor="let language of job.languages">
-        <app-pill-languages *ngFor="let tool of job.tools" [languages] = "{role: job.role, level: job.level, languages: language, tools: tool}"></app-pill-languages>
+    <div class="pill-component" *ngFor="let filter of filters">
+        <app-pill-languages *ngIf="job.role" pillType="pill" [pillText]='job.role' (click)="handleFilterSelection(filter)"></app-pill-languages>
+        <app-pill-languages *ngIf="job.level" pillType="pill" [pillText]='job.level' (click)="handleFilterSelection(filter)"></app-pill-languages>
+        <app-pill-languages *ngFor="let language of job.languages" pillType="pill" [pillText]='language' (click)="handleFilterSelection(filter)"></app-pill-languages>
+        <app-pill-languages *ngFor="let tool of job.tools" pillType="pill" [pillText]='tool' (click)="handleFilterSelection(filter)"></app-pill-languages>
     </div>
 </div>

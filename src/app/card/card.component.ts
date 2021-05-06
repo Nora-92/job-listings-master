@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { JobsService } from '../jobs.service';
 import { Job } from '../models/job.interface';
 
@@ -18,6 +18,8 @@ interface JobDetail {
   languages: string[];
 }
 
+type Filter = {[key: string]: string};
+
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
@@ -27,10 +29,24 @@ export class CardComponent implements OnInit {
 
   @Input() job?: Job;
 
+  @Input() filters = [
+    { type: 'role', value: '' },
+    { type: 'level', value: '' },
+    { type: 'languages', value: ''},
+    { type: 'tools', value: '' }
+  ]
 
-  constructor(private jobService: JobsService) { }
+  @Output() onFilterSelect: EventEmitter<Filter> = new EventEmitter();
+
+
+
+  constructor() { }
 
   ngOnInit(): void {
+  }
+
+  handleFilterSelection(filter: Filter){
+    this.onFilterSelect.emit(filter);
   }
 
 

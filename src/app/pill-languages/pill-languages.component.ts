@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormControl } from '@angular/forms';
+
 
 
 @Component({
@@ -8,17 +10,15 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PillLanguagesComponent implements OnInit {
 
-  // @Input() role?: string;
-  // @Input() level?: string;
-  // @Input() languages?: string[];
-  // @Input() tools?: any[];
-
   @Input() pillText='';
   @Input() pillType='';
+
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
+
 
 }

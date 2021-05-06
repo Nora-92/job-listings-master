@@ -6,8 +6,8 @@
         </g>
     </svg>
 </header>
-<div class="full-card">
-    <div class="card" *ngIf="jobs">
-        <app-card *ngFor="let job of jobs" [job]="job"></app-card>
-    </div>
+<app-search-bar (onSearch)="search($event)"></app-search-bar>
+
+<div class="card" *ngIf="jobs">
+    <app-card *ngFor="let job of jobs" [job]="job" (onFilterSelect)="searchLanguages($event)"></app-card>
 </div>
